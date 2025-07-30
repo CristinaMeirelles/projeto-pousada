@@ -6,9 +6,11 @@
   box-sizing: border-box;
   font-family: "Source Sans 3", sans-serif;
 }
+
 header {
   background-color: #009688;
 }
+
 .topo {
   display: flex;
   justify-content: space-between;
@@ -39,23 +41,26 @@ span {
   background: url("assets/img-fundo.jpg");
   height: 750px;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .banner-titulo {
-  background-color: rgba(0, 150, 136, ALFA);
+  background-color: rgba(0, 150, 136, 0.85);
   box-shadow: 4px 30px 50px #009688;
   padding: 40px;
   border-radius: 10px;
   width: 60%;
   max-width: 1024px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .box {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* ocupa a altura total da tela */
+  height: 100vh;
   background-size: cover;
   background-position: center;
 }
@@ -111,7 +116,7 @@ span {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 30px;
   padding: 40px;
 }
 
@@ -134,18 +139,13 @@ span {
   border-radius: 8px;
   margin-top: 30px;
 }
+
 .sobre img {
   width: 100px;
 }
 
 .sobre h2 {
   margin-top: -50px;
-}
-.quartos-detalhes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
 }
 
 .linha {
@@ -204,4 +204,80 @@ footer {
   font-weight: 600;
   text-align: center;
   border-top: 1px solid #3b7863;
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-topo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .banner {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .banner-titulo {
+    width: 90%;
+    padding: 30px 15px;
+  }
+
+  .banner-titulo h1 {
+    font-size: 30px;
+  }
+
+  .banner-titulo p {
+    font-size: 18px;
+  }
+
+  .quartos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quartos img {
+    width: 80%;
+    margin: 20px 0;
+  }
+
+  .quartos-detalhes {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .contato-rodape {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .informacao-rodape {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .informacao {
+    padding: 30px 15px;
+  }
+
+  .informacao h2 {
+    font-size: 24px;
+  }
+
+  .informacao p {
+    font-size: 14px;
+  }
 }
